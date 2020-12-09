@@ -6,11 +6,11 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Added
 
-- Nothing.
+- New option 'ignorePaths' to always allow certain uri paths even without authorization, e.g. /health
 
 ### Changed
 
-- Nothing.
+- Rename AuthorizationHeader class to BasicAuthorizationHeader
 
 ### Deprecated
 

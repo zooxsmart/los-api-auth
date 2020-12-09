@@ -13,21 +13,36 @@ use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Throwable;
 
+use function array_search;
+
 final class ApiAuth implements MiddlewareInterface
 {
     private Strategy $strategy;
     private Authenticator $authenticator;
     private Output $output;
+    /** @var string[] */
+    private array $ignorePaths;
 
-    public function __construct(Strategy $strategy, Authenticator $authenticator, Output $output)
+    /**
+     * @param string[] $ignorePaths
+     */
+    public function __construct(Strategy $strategy, Authenticator $authenticator, Output $output, array $ignorePaths = [])
     {
         $this->strategy      = $strategy;
         $this->authenticator = $authenticator;
         $this->output        = $output;
+        $this->ignorePaths   = $ignorePaths;
     }
 
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
+        if (! empty($this->ignorePaths)) {
+            $path = $request->getUri()->getPath();
+            if (array_search($path, $this->ignorePaths) !== false) {
+                return $handler->handle($request);
+            }
+        }
+
         try {
             $authData = ($this->strategy)($request);
         } catch (Throwable $ex) {

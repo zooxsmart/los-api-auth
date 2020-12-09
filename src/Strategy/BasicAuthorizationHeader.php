@@ -15,7 +15,7 @@ use function explode;
 use function preg_match;
 use function substr;
 
-final class AuthorizationHeader implements Strategy
+final class BasicAuthorizationHeader implements Strategy
 {
     private bool $required;
 

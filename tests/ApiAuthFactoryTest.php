@@ -24,6 +24,7 @@ class ApiAuthFactoryTest extends TestCase
             [Strategy::class, $this->createStub(Strategy::class)],
             [Authenticator::class, $this->createStub(Authenticator::class)],
             [Output::class, $this->createStub(Output::class)],
+            ['config', []],
         ]));
 
         $apiAuth = (new ApiAuthFactory())($container);
