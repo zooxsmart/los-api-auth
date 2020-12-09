@@ -1,5 +1,11 @@
 # Api Auth
 
+[![codecov](https://codecov.io/gh/Lansoweb/api-auth/branch/main/graph/badge.svg?token=0IIRZ0GYFN)](https://codecov.io/gh/Lansoweb/api-auth)
+[![GitHub license](https://img.shields.io/github/license/Lansoweb/api-auth)](https://github.com/Lansoweb/api-auth/blob/1.0.x/LICENSE)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Lansoweb/api-auth/PHPUnit%20tests)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/Lansoweb/api-auth)
+![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/los/api-auth)
+
 This library provides a PHP middleware for api authentication.
 
 ### Installation
@@ -25,6 +31,39 @@ Then add the middleware to you pipeline:
 $app->pipe(\ApiAuth\ApiAuth::class);
 ```
 
+If using [laminas](https://getlaminas.org), you can create a config/autoload/api-auth.global.php:
+```php
+<?php
+
+declare(strict_types=1);
+
+use ApiAuth\ApiAuth;
+use ApiAuth\ApiAuthFactory;
+use ApiAuth\Authenticator\ArrayAuthenticatorFactory;
+use ApiAuth\Authenticator\Authenticator;
+use ApiAuth\Output\Output;
+use ApiAuth\Output\ProblemDetailsOutputFactory;
+use ApiAuth\Strategy\BasicAuthorizationHeader;
+use ApiAuth\Strategy\Strategy;
+
+return [
+    'dependencies' => [
+        'invokables' => [
+            Strategy::class => BasicAuthorizationHeader::class,
+        ],
+        'factories'  => [
+            ApiAuth::class       => ApiAuthFactory::class,
+            Authenticator::class => ArrayAuthenticatorFactory::class,
+            Output::class        => ProblemDetailsOutputFactory::class,
+        ],
+    ],
+    'api-auth'     => [
+        'ignorePaths' => ['/health'], 
+        'identities'  => ['707cd425-0a60-4d36-b2e8-c9fd7fc0f194' => '208bfbc5-e705-46b1-aec0-2b0e1b4156ad'],
+    ],
+];
+
+```
 ### Strategies
 
 Included:

@@ -99,4 +99,30 @@ class ApiAuthTest extends TestCase
 
         $this->assertEquals('123', $response->getHeader('identity')[0]);
     }
+
+    public function testSucceedWithIgnorePaths(): void
+    {
+        $output = $this->createMock(Output::class);
+
+        $strategy = $this->createMock(Strategy::class);
+        $strategy->expects($this->never())->method('__invoke');
+
+        $authenticator = $this->createMock(Authenticator::class);
+        $authenticator->expects($this->never())->method('__invoke');
+
+        $handler = $this->createMock(RequestHandlerInterface::class);
+        $that    = $this;
+        $handler->expects($this->once())->method('handle')->willReturnCallback(static function (ServerRequest $args) use ($that) {
+            $token = $args->getAttribute(Authenticator::class);
+            $that->assertNull($token);
+
+            return new Response();
+        });
+
+        $apiAuth = new ApiAuth($strategy, $authenticator, $output, ['/health']);
+
+        $response = $apiAuth->process(new ServerRequest([], [], '/health'), $handler);
+
+        $this->assertFalse($response->hasHeader('identity'));
+    }
 }
