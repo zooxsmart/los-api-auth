@@ -27,7 +27,7 @@ class ApiAuthFactory
             $container->get(Strategy::class),
             $container->get(Authenticator::class),
             $container->get(Output::class),
-            $ignorePaths
+            $ignorePaths,
         );
     }
 }

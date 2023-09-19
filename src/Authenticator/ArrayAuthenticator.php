@@ -14,15 +14,9 @@ use function password_verify;
 
 final class ArrayAuthenticator implements Authenticator
 {
-    /** @var string[]|array<string, string> */
-    private array $identities;
-
-    /**
-     * @param string[]|array<string, string> $identities
-     */
-    public function __construct(array $identities)
+    /** @param string[]|array<string, string> $identities */
+    public function __construct(private array $identities)
     {
-        $this->identities = $identities;
     }
 
     public function __invoke(AuthData $authData): string

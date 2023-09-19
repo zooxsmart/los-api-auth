@@ -13,16 +13,11 @@ use function sprintf;
 
 class CustomHeader implements Strategy
 {
-    private bool $required;
-    private string $header;
-
-    public function __construct(string $header, bool $required = true)
+    public function __construct(private string $header, private bool $required = true)
     {
-        $this->required = $required;
-        $this->header   = $header;
     }
 
-    public function __invoke(ServerRequestInterface $request): ?AuthData
+    public function __invoke(ServerRequestInterface $request): AuthData|null
     {
         if (! $request->hasHeader($this->header)) {
             if ($this->required) {

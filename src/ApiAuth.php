@@ -17,21 +17,13 @@ use function array_search;
 
 final class ApiAuth implements MiddlewareInterface
 {
-    private Strategy $strategy;
-    private Authenticator $authenticator;
-    private Output $output;
-    /** @var string[] */
-    private array $ignorePaths;
-
-    /**
-     * @param string[] $ignorePaths
-     */
-    public function __construct(Strategy $strategy, Authenticator $authenticator, Output $output, array $ignorePaths = [])
-    {
-        $this->strategy      = $strategy;
-        $this->authenticator = $authenticator;
-        $this->output        = $output;
-        $this->ignorePaths   = $ignorePaths;
+    /** @param string[] $ignorePaths */
+    public function __construct(
+        private Strategy $strategy,
+        private Authenticator $authenticator,
+        private Output $output,
+        private array $ignorePaths = [],
+    ) {
     }
 
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface

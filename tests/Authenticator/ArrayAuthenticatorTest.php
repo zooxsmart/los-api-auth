@@ -8,9 +8,7 @@ use ApiAuth\AuthData;
 use ApiAuth\Authenticator\ArrayAuthenticator;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \ApiAuth\Authenticator\ArrayAuthenticator
- */
+/** @covers \ApiAuth\Authenticator\ArrayAuthenticator */
 class ArrayAuthenticatorTest extends TestCase
 {
     private string $hash = '$2y$12$a3WsDmzuMD1reX0GehRVkuPwU8Labd/LXU6Ww57UJEuKu1D6MQ2MK';

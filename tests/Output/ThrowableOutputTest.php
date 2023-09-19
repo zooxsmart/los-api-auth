@@ -9,9 +9,7 @@ use Exception;
 use Laminas\Diactoros\ServerRequest;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \ApiAuth\Output\ThrowableOutput
- */
+/** @covers \ApiAuth\Output\ThrowableOutput */
 class ThrowableOutputTest extends TestCase
 {
     public function testHandleAuthenticatorError(): void

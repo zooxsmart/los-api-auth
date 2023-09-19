@@ -7,9 +7,7 @@ namespace ApiAuth\Test;
 use ApiAuth\AuthData;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \ApiAuth\AuthData
- */
+/** @covers \ApiAuth\AuthData */
 class AuthDataTest extends TestCase
 {
     public function testIdentity(): void

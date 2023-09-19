@@ -10,9 +10,7 @@ use ApiAuth\Strategy\XApiKeyHeader;
 use Laminas\Diactoros\ServerRequest;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \ApiAuth\Strategy\Aggregate
- */
+/** @covers \ApiAuth\Strategy\Aggregate */
 class AggregateTest extends TestCase
 {
     public function testNotFound(): void
@@ -36,7 +34,6 @@ class AggregateTest extends TestCase
         $request   = (new ServerRequest())->withHeader('X-Api-Key', '123');
         $authData  = ($aggregate)($request);
         $this->assertNotNull($authData);
-        // @phpstan-ignore-next-line
         $this->assertEquals('123', $authData->identity());
     }
 }

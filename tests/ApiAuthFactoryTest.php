@@ -12,9 +12,7 @@ use ApiAuth\Strategy\Strategy;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 
-/**
- * @covers \ApiAuth\ApiAuthFactory
- */
+/** @covers \ApiAuth\ApiAuthFactory */
 class ApiAuthFactoryTest extends TestCase
 {
     public function testInvoke(): void
