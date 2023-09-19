@@ -9,9 +9,7 @@ use ApiAuth\Authenticator\ArrayAuthenticatorFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 
-/**
- * @covers \ApiAuth\Authenticator\ArrayAuthenticatorFactory
- */
+/** @covers \ApiAuth\Authenticator\ArrayAuthenticatorFactory */
 class ArrayAuthenticatorFactoryTest extends TestCase
 {
     public function testInvoke(): void

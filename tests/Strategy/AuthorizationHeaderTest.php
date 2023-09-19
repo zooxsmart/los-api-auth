@@ -13,9 +13,7 @@ use function assert;
 use function base64_encode;
 use function sprintf;
 
-/**
- * @covers \ApiAuth\Strategy\BasicAuthorizationHeader
- */
+/** @covers \ApiAuth\Strategy\BasicAuthorizationHeader */
 class AuthorizationHeaderTest extends TestCase
 {
     public function testMissingHeader(): void
@@ -57,7 +55,7 @@ class AuthorizationHeaderTest extends TestCase
         $strategy = new BasicAuthorizationHeader();
         $request  = (new ServerRequest())->withHeader(
             'Authorization',
-            'Basic: ' . base64_encode(sprintf('%s:%s', $identity, $credential))
+            'Basic: ' . base64_encode(sprintf('%s:%s', $identity, $credential)),
         );
         $authData = ($strategy)($request);
         assert($authData instanceof AuthData);

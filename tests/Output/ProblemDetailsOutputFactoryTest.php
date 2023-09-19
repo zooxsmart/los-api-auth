@@ -10,9 +10,7 @@ use Mezzio\ProblemDetails\ProblemDetailsResponseFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 
-/**
- * @covers \ApiAuth\Output\ProblemDetailsOutputFactory
- */
+/** @covers \ApiAuth\Output\ProblemDetailsOutputFactory */
 class ProblemDetailsOutputFactoryTest extends TestCase
 {
     public function testInvoke(): void

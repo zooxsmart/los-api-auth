@@ -9,16 +9,12 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class Aggregate implements Strategy
 {
-    /** @var Strategy[] */
-    private array $strategies;
-
     /** @param Strategy[] $strategies */
-    public function __construct(array $strategies)
+    public function __construct(private array $strategies)
     {
-        $this->strategies = $strategies;
     }
 
-    public function __invoke(ServerRequestInterface $request): ?AuthData
+    public function __invoke(ServerRequestInterface $request): AuthData|null
     {
         foreach ($this->strategies as $strategy) {
             $authData = $strategy($request);

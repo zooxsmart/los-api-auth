@@ -9,5 +9,5 @@ use Psr\Http\Message\ServerRequestInterface;
 
 interface Strategy
 {
-    public function __invoke(ServerRequestInterface $request): ?AuthData;
+    public function __invoke(ServerRequestInterface $request): AuthData|null;
 }

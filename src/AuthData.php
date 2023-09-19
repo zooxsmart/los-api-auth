@@ -6,13 +6,8 @@ namespace ApiAuth;
 
 class AuthData
 {
-    private string $identity;
-    private ?string $credential;
-
-    public function __construct(string $identity, ?string $credential = null)
+    public function __construct(private string $identity, private string|null $credential = null)
     {
-        $this->identity   = $identity;
-        $this->credential = $credential;
     }
 
     public function identity(): string
@@ -20,7 +15,7 @@ class AuthData
         return $this->identity;
     }
 
-    public function credential(): ?string
+    public function credential(): string|null
     {
         return $this->credential;
     }

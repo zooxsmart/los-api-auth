@@ -10,9 +10,7 @@ use Laminas\Diactoros\ServerRequest;
 use Mezzio\ProblemDetails\ProblemDetailsResponseFactory;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \ApiAuth\Output\ProblemDetailsOutput
- */
+/** @covers \ApiAuth\Output\ProblemDetailsOutput */
 class ProblemDetailsOutputTest extends TestCase
 {
     public function testHandleAuthenticatorError(): void

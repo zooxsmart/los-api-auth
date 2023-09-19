@@ -18,9 +18,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 use function assert;
 use function is_string;
 
-/**
- * @covers \ApiAuth\ApiAuth
- */
+/** @covers \ApiAuth\ApiAuth */
 class ApiAuthTest extends TestCase
 {
     public function testHandleStrategyError(): void
@@ -112,12 +110,14 @@ class ApiAuthTest extends TestCase
 
         $handler = $this->createMock(RequestHandlerInterface::class);
         $that    = $this;
-        $handler->expects($this->once())->method('handle')->willReturnCallback(static function (ServerRequest $args) use ($that) {
-            $token = $args->getAttribute(Authenticator::class);
-            $that->assertNull($token);
+        $handler->expects($this->once())->method('handle')->willReturnCallback(
+            static function (ServerRequest $args) use ($that) {
+                $token = $args->getAttribute(Authenticator::class);
+                $that->assertNull($token);
 
-            return new Response();
-        });
+                return new Response();
+            },
+        );
 
         $apiAuth = new ApiAuth($strategy, $authenticator, $output, ['/health']);
 

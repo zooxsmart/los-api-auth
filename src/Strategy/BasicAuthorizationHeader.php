@@ -17,14 +17,11 @@ use function substr;
 
 final class BasicAuthorizationHeader implements Strategy
 {
-    private bool $required;
-
-    public function __construct(bool $required = true)
+    public function __construct(private bool $required = true)
     {
-        $this->required = $required;
     }
 
-    public function __invoke(ServerRequestInterface $request): ?AuthData
+    public function __invoke(ServerRequestInterface $request): AuthData|null
     {
         if (! $request->hasHeader('authorization')) {
             if ($this->required) {

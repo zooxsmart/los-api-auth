@@ -11,11 +11,8 @@ use Throwable;
 
 final class ProblemDetailsOutput implements Output
 {
-    private ProblemDetailsResponseFactory $problemResponseFactory;
-
-    public function __construct(ProblemDetailsResponseFactory $problemResponseFactory)
+    public function __construct(private ProblemDetailsResponseFactory $problemResponseFactory)
     {
-        $this->problemResponseFactory = $problemResponseFactory;
     }
 
     public function handleStrategyError(ServerRequestInterface $request, Throwable $ex): ResponseInterface

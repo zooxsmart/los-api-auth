@@ -31,6 +31,8 @@ Then add the middleware to you pipeline:
 $app->pipe(\ApiAuth\ApiAuth::class);
 ```
 
+If successful, the middleware will register a new Request attribute ```ApiAuth\Authenticator\Authenticator``` with the identity found, so you can know which identity is authorized in the request.
+
 If using [laminas](https://getlaminas.org), you can create a config/autoload/api-auth.global.php:
 ```php
 <?php
