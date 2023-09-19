@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Strategy;
+namespace Los\ApiAuth\Strategy;
 
 final class XApiKeyHeader extends CustomHeader
 {

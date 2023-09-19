@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth;
+namespace Los\ApiAuth;
 
-use ApiAuth\Authenticator\Authenticator;
-use ApiAuth\Output\Output;
-use ApiAuth\Strategy\Strategy;
+use Los\ApiAuth\Authenticator\Authenticator;
+use Los\ApiAuth\Output\Output;
+use Los\ApiAuth\Strategy\Strategy;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;

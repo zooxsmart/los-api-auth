@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Output;
+namespace Los\ApiAuth\Output;
 
-use ApiAuth\Exception\NoAuthDataFound;
+use Los\ApiAuth\Exception\NoAuthDataFound;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Throwable;

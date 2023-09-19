@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Test;
+namespace Los\ApiAuth\Test;
 
-use ApiAuth\ApiAuth;
-use ApiAuth\ApiAuthFactory;
-use ApiAuth\Authenticator\Authenticator;
-use ApiAuth\Output\Output;
-use ApiAuth\Strategy\Strategy;
+use Los\ApiAuth\ApiAuth;
+use Los\ApiAuth\ApiAuthFactory;
+use Los\ApiAuth\Authenticator\Authenticator;
+use Los\ApiAuth\Output\Output;
+use Los\ApiAuth\Strategy\Strategy;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 
-/** @covers \ApiAuth\ApiAuthFactory */
+/** @covers \Los\ApiAuth\ApiAuthFactory */
 class ApiAuthFactoryTest extends TestCase
 {
     public function testInvoke(): void

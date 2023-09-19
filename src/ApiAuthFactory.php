@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth;
+namespace Los\ApiAuth;
 
-use ApiAuth\Authenticator\Authenticator;
-use ApiAuth\Output\Output;
-use ApiAuth\Strategy\Strategy;
+use Los\ApiAuth\Authenticator\Authenticator;
+use Los\ApiAuth\Output\Output;
+use Los\ApiAuth\Strategy\Strategy;
 use Psr\Container\ContainerInterface;
 
 use function assert;
@@ -19,8 +19,8 @@ class ApiAuthFactory
         $config = $container->get('config');
         assert(is_array($config));
 
-        /** @var string[] $ignorePaths */
-        $ignorePaths = $config['api-auth']['ignorePaths'] ?? [];
+        /** @psalm-suppress MixedAssignment, MixedArrayAccess */
+        $ignorePaths = $config['los']['api-auth']['ignorePaths'] ?? $config['api-auth']['ignorePaths'] ?? [];
 
         /** @psalm-suppress MixedArgument */
         return new ApiAuth(

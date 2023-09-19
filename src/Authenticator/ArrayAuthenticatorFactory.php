@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Authenticator;
+namespace Los\ApiAuth\Authenticator;
 
 use Psr\Container\ContainerInterface;
 

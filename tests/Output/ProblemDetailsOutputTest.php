@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Test\Output;
+namespace Los\ApiAuth\Test\Output;
 
-use ApiAuth\Output\ProblemDetailsOutput;
 use Exception;
 use Laminas\Diactoros\ServerRequest;
+use Los\ApiAuth\Output\ProblemDetailsOutput;
 use Mezzio\ProblemDetails\ProblemDetailsResponseFactory;
 use PHPUnit\Framework\TestCase;
 

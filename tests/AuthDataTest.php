@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Test;
+namespace Los\ApiAuth\Test;
 
-use ApiAuth\AuthData;
+use Los\ApiAuth\AuthData;
 use PHPUnit\Framework\TestCase;
 
 /** @covers \ApiAuth\AuthData */

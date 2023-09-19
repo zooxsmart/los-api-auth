@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Authenticator;
+namespace Los\ApiAuth\Authenticator;
 
-use ApiAuth\AuthData;
-use ApiAuth\Exception\AuthorizationFailed;
+use Los\ApiAuth\AuthData;
+use Los\ApiAuth\Exception\AuthorizationFailed;
 
 use function array_key_exists;
 use function array_search;

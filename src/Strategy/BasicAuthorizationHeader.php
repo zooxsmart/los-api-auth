@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Strategy;
+namespace Los\ApiAuth\Strategy;
 
-use ApiAuth\AuthData;
-use ApiAuth\Exception\InvalidHeader;
-use ApiAuth\Exception\MissingHeader;
+use Los\ApiAuth\AuthData;
+use Los\ApiAuth\Exception\InvalidHeader;
+use Los\ApiAuth\Exception\MissingHeader;
 use Psr\Http\Message\ServerRequestInterface;
 
 use function base64_decode;

@@ -2,23 +2,23 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Test;
+namespace Los\ApiAuth\Test;
 
-use ApiAuth\ApiAuth;
-use ApiAuth\AuthData;
-use ApiAuth\Authenticator\Authenticator;
-use ApiAuth\Output\Output;
-use ApiAuth\Strategy\Strategy;
 use Exception;
 use Laminas\Diactoros\Response;
 use Laminas\Diactoros\ServerRequest;
+use Los\ApiAuth\ApiAuth;
+use Los\ApiAuth\AuthData;
+use Los\ApiAuth\Authenticator\Authenticator;
+use Los\ApiAuth\Output\Output;
+use Los\ApiAuth\Strategy\Strategy;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Server\RequestHandlerInterface;
 
 use function assert;
 use function is_string;
 
-/** @covers \ApiAuth\ApiAuth */
+/** @covers \Los\ApiAuth\ApiAuth */
 class ApiAuthTest extends TestCase
 {
     public function testHandleStrategyError(): void

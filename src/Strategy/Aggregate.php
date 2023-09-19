@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Strategy;
+namespace Los\ApiAuth\Strategy;
 
-use ApiAuth\AuthData;
+use Los\ApiAuth\AuthData;
 use Psr\Http\Message\ServerRequestInterface;
 
 final class Aggregate implements Strategy

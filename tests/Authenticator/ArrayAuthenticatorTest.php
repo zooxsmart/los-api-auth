@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Test\Authenticator;
+namespace Los\ApiAuth\Test\Authenticator;
 
-use ApiAuth\AuthData;
-use ApiAuth\Authenticator\ArrayAuthenticator;
+use Los\ApiAuth\AuthData;
+use Los\ApiAuth\Authenticator\ArrayAuthenticator;
 use PHPUnit\Framework\TestCase;
 
 /** @covers \ApiAuth\Authenticator\ArrayAuthenticator */

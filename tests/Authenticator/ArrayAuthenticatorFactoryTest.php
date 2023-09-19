@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Test\Authenticator;
+namespace Los\ApiAuth\Test\Authenticator;
 
-use ApiAuth\Authenticator\ArrayAuthenticator;
-use ApiAuth\Authenticator\ArrayAuthenticatorFactory;
+use Los\ApiAuth\Authenticator\ArrayAuthenticator;
+use Los\ApiAuth\Authenticator\ArrayAuthenticatorFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 
