@@ -10,7 +10,7 @@ use Los\ApiAuth\Strategy\CustomHeader;
 use Los\ApiAuth\Strategy\XApiKeyHeader;
 use PHPUnit\Framework\TestCase;
 
-/** @covers \ApiAuth\Strategy\Aggregate */
+/** @covers \Los\ApiAuth\Strategy\Aggregate */
 class AggregateTest extends TestCase
 {
     public function testNotFound(): void

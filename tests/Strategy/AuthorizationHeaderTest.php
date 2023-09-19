@@ -13,7 +13,7 @@ use function assert;
 use function base64_encode;
 use function sprintf;
 
-/** @covers \ApiAuth\Strategy\BasicAuthorizationHeader */
+/** @covers \Los\ApiAuth\Strategy\BasicAuthorizationHeader */
 class AuthorizationHeaderTest extends TestCase
 {
     public function testMissingHeader(): void

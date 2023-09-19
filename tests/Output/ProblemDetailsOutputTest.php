@@ -10,7 +10,7 @@ use Los\ApiAuth\Output\ProblemDetailsOutput;
 use Mezzio\ProblemDetails\ProblemDetailsResponseFactory;
 use PHPUnit\Framework\TestCase;
 
-/** @covers \ApiAuth\Output\ProblemDetailsOutput */
+/** @covers \Los\ApiAuth\Output\ProblemDetailsOutput */
 class ProblemDetailsOutputTest extends TestCase
 {
     public function testHandleAuthenticatorError(): void

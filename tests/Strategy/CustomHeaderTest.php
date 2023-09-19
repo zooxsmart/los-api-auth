@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 
 use function assert;
 
-/** @covers \ApiAuth\Strategy\CustomHeader */
+/** @covers \Los\ApiAuth\Strategy\CustomHeader */
 class CustomHeaderTest extends TestCase
 {
     public function testMissingHeader(): void

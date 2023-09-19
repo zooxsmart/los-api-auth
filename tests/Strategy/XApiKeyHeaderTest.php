@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 
 use function assert;
 
-/** @covers \ApiAuth\Strategy\XApiKeyHeader */
+/** @covers \Los\ApiAuth\Strategy\XApiKeyHeader */
 class XApiKeyHeaderTest extends TestCase
 {
     public function testMissingHeader(): void

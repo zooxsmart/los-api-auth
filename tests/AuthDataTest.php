@@ -7,7 +7,7 @@ namespace Los\ApiAuth\Test;
 use Los\ApiAuth\AuthData;
 use PHPUnit\Framework\TestCase;
 
-/** @covers \ApiAuth\AuthData */
+/** @covers \Los\ApiAuth\AuthData */
 class AuthDataTest extends TestCase
 {
     public function testIdentity(): void
