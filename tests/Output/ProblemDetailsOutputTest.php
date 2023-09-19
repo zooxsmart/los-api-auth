@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Test\Output;
+namespace Los\ApiAuth\Test\Output;
 
-use ApiAuth\Output\ProblemDetailsOutput;
 use Exception;
 use Laminas\Diactoros\ServerRequest;
+use Los\ApiAuth\Output\ProblemDetailsOutput;
 use Mezzio\ProblemDetails\ProblemDetailsResponseFactory;
 use PHPUnit\Framework\TestCase;
 
-/** @covers \ApiAuth\Output\ProblemDetailsOutput */
+/** @covers \Los\ApiAuth\Output\ProblemDetailsOutput */
 class ProblemDetailsOutputTest extends TestCase
 {
     public function testHandleAuthenticatorError(): void

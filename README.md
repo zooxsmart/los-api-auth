@@ -19,19 +19,19 @@ composer require los/api-auth
 Using PSR-11 containers, use the provided factories and define factories for each requirement:
 ```php
 return [
-    \ApiAuth\ApiAuth::class => \ApiAuth\ApiAuthFactory::class,
-    \ApiAuth\Strategy\Strategy::class => \ApiAuth\Strategy\XApiKeyHeader::class,
-    \ApiAuth\Authenticator\Authenticator::class => \ApiAuth\Authenticator\ArrayAuthenticatorFactory::class,
-    \ApiAuth\Output\Output::class => \ApiAuth\Output\ProblemDetailsOutputFactory::class,
+    \Los\ApiAuth\ApiAuth::class => \Los\ApiAuth\ApiAuthFactory::class,
+    \Los\ApiAuth\Strategy\Strategy::class => \Los\ApiAuth\Strategy\XApiKeyHeader::class,
+    \Los\ApiAuth\Authenticator\Authenticator::class => \Los\ApiAuth\Authenticator\ArrayAuthenticatorFactory::class,
+    \Los\ApiAuth\Output\Output::class => \Los\ApiAuth\Output\ProblemDetailsOutputFactory::class,
 ];
 ```
 
 Then add the middleware to you pipeline:
 ```php
-$app->pipe(\ApiAuth\ApiAuth::class);
+$app->pipe(\Los\ApiAuth\ApiAuth::class);
 ```
 
-If successful, the middleware will register a new Request attribute ```ApiAuth\Authenticator\Authenticator``` with the identity found, so you can know which identity is authorized in the request.
+If successful, the middleware will register a new Request attribute ```Los\ApiAuth\Authenticator\Authenticator``` with the identity found, so you can know which identity is authorized in the request.
 
 If using [laminas](https://getlaminas.org), you can create a config/autoload/api-auth.global.php:
 ```php
@@ -39,14 +39,14 @@ If using [laminas](https://getlaminas.org), you can create a config/autoload/api
 
 declare(strict_types=1);
 
-use ApiAuth\ApiAuth;
-use ApiAuth\ApiAuthFactory;
-use ApiAuth\Authenticator\ArrayAuthenticatorFactory;
-use ApiAuth\Authenticator\Authenticator;
-use ApiAuth\Output\Output;
-use ApiAuth\Output\ProblemDetailsOutputFactory;
-use ApiAuth\Strategy\BasicAuthorizationHeader;
-use ApiAuth\Strategy\Strategy;
+use Los\ApiAuth\ApiAuth;
+use Los\ApiAuth\ApiAuthFactory;
+use Los\ApiAuth\Authenticator\ArrayAuthenticatorFactory;
+use Los\ApiAuth\Authenticator\Authenticator;
+use Los\ApiAuth\Output\Output;
+use Los\ApiAuth\Output\ProblemDetailsOutputFactory;
+use Los\ApiAuth\Strategy\BasicAuthorizationHeader;
+use Los\ApiAuth\Strategy\Strategy;
 
 return [
     'dependencies' => [

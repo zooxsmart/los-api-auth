@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Test\Strategy;
+namespace Los\ApiAuth\Test\Strategy;
 
-use ApiAuth\AuthData;
-use ApiAuth\Strategy\XApiKeyHeader;
 use Laminas\Diactoros\ServerRequest;
+use Los\ApiAuth\AuthData;
+use Los\ApiAuth\Strategy\XApiKeyHeader;
 use PHPUnit\Framework\TestCase;
 
 use function assert;
 
-/** @covers \ApiAuth\Strategy\XApiKeyHeader */
+/** @covers \Los\ApiAuth\Strategy\XApiKeyHeader */
 class XApiKeyHeaderTest extends TestCase
 {
     public function testMissingHeader(): void

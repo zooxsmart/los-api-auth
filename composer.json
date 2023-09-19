@@ -32,12 +32,12 @@
     },
     "autoload": {
         "psr-4": {
-            "ApiAuth\\": "src/"
+            "Los\\ApiAuth\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ApiAuth\\Test\\": "tests/"
+            "Los\\ApiAuth\\Test\\": "tests/"
         }
     },
     "config": {

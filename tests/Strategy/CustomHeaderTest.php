@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Test\Strategy;
+namespace Los\ApiAuth\Test\Strategy;
 
-use ApiAuth\AuthData;
-use ApiAuth\Strategy\CustomHeader;
 use Laminas\Diactoros\ServerRequest;
+use Los\ApiAuth\AuthData;
+use Los\ApiAuth\Strategy\CustomHeader;
 use PHPUnit\Framework\TestCase;
 
 use function assert;
 
-/** @covers \ApiAuth\Strategy\CustomHeader */
+/** @covers \Los\ApiAuth\Strategy\CustomHeader */
 class CustomHeaderTest extends TestCase
 {
     public function testMissingHeader(): void

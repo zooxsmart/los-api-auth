@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Test\Output;
+namespace Los\ApiAuth\Test\Output;
 
-use ApiAuth\Output\ProblemDetailsOutput;
-use ApiAuth\Output\ProblemDetailsOutputFactory;
+use Los\ApiAuth\Output\ProblemDetailsOutput;
+use Los\ApiAuth\Output\ProblemDetailsOutputFactory;
 use Mezzio\ProblemDetails\ProblemDetailsResponseFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 
-/** @covers \ApiAuth\Output\ProblemDetailsOutputFactory */
+/** @covers \Los\ApiAuth\Output\ProblemDetailsOutputFactory */
 class ProblemDetailsOutputFactoryTest extends TestCase
 {
     public function testInvoke(): void

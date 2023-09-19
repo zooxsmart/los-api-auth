@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth;
+namespace Los\ApiAuth;
 
 class AuthData
 {

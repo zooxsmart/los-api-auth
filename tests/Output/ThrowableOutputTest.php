@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Test\Output;
+namespace Los\ApiAuth\Test\Output;
 
-use ApiAuth\Output\ThrowableOutput;
 use Exception;
 use Laminas\Diactoros\ServerRequest;
+use Los\ApiAuth\Output\ThrowableOutput;
 use PHPUnit\Framework\TestCase;
 
-/** @covers \ApiAuth\Output\ThrowableOutput */
+/** @covers \Los\ApiAuth\Output\ThrowableOutput */
 class ThrowableOutputTest extends TestCase
 {
     public function testHandleAuthenticatorError(): void

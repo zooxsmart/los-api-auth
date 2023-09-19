@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Test\Strategy;
+namespace Los\ApiAuth\Test\Strategy;
 
-use ApiAuth\AuthData;
-use ApiAuth\Strategy\BasicAuthorizationHeader;
 use Laminas\Diactoros\ServerRequest;
+use Los\ApiAuth\AuthData;
+use Los\ApiAuth\Strategy\BasicAuthorizationHeader;
 use PHPUnit\Framework\TestCase;
 
 use function assert;
 use function base64_encode;
 use function sprintf;
 
-/** @covers \ApiAuth\Strategy\BasicAuthorizationHeader */
+/** @covers \Los\ApiAuth\Strategy\BasicAuthorizationHeader */
 class AuthorizationHeaderTest extends TestCase
 {
     public function testMissingHeader(): void

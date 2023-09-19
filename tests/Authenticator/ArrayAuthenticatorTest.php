@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Test\Authenticator;
+namespace Los\ApiAuth\Test\Authenticator;
 
-use ApiAuth\AuthData;
-use ApiAuth\Authenticator\ArrayAuthenticator;
+use Los\ApiAuth\AuthData;
+use Los\ApiAuth\Authenticator\ArrayAuthenticator;
 use PHPUnit\Framework\TestCase;
 
-/** @covers \ApiAuth\Authenticator\ArrayAuthenticator */
+/** @covers \Los\ApiAuth\Authenticator\ArrayAuthenticator */
 class ArrayAuthenticatorTest extends TestCase
 {
     private string $hash = '$2y$12$a3WsDmzuMD1reX0GehRVkuPwU8Labd/LXU6Ww57UJEuKu1D6MQ2MK';

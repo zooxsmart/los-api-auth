@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Authenticator;
+namespace Los\ApiAuth\Authenticator;
 
-use ApiAuth\AuthData;
+use Los\ApiAuth\AuthData;
 
 interface Authenticator
 {

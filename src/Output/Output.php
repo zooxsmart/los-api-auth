@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Output;
+namespace Los\ApiAuth\Output;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

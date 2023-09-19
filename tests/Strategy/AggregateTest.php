@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Test\Strategy;
+namespace Los\ApiAuth\Test\Strategy;
 
-use ApiAuth\Strategy\Aggregate;
-use ApiAuth\Strategy\CustomHeader;
-use ApiAuth\Strategy\XApiKeyHeader;
 use Laminas\Diactoros\ServerRequest;
+use Los\ApiAuth\Strategy\Aggregate;
+use Los\ApiAuth\Strategy\CustomHeader;
+use Los\ApiAuth\Strategy\XApiKeyHeader;
 use PHPUnit\Framework\TestCase;
 
-/** @covers \ApiAuth\Strategy\Aggregate */
+/** @covers \Los\ApiAuth\Strategy\Aggregate */
 class AggregateTest extends TestCase
 {
     public function testNotFound(): void

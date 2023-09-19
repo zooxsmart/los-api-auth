@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace ApiAuth\Test;
+namespace Los\ApiAuth\Test;
 
-use ApiAuth\AuthData;
+use Los\ApiAuth\AuthData;
 use PHPUnit\Framework\TestCase;
 
-/** @covers \ApiAuth\AuthData */
+/** @covers \Los\ApiAuth\AuthData */
 class AuthDataTest extends TestCase
 {
     public function testIdentity(): void
