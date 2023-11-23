@@ -1,5 +1,5 @@
 {
-    "name": "los/api-auth",
+    "name": "zooxsmart/los-api-auth",
     "description": "Auth Middleware for apis",
     "license": "MIT",
     "type": "library",
