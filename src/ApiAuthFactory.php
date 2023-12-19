@@ -20,7 +20,7 @@ class ApiAuthFactory
         assert(is_array($config));
 
         /** @psalm-suppress MixedAssignment, MixedArrayAccess */
-        $ignorePaths = $config['los']['api-auth']['ignorePaths'] ?? $config['api-auth']['ignorePaths'] ?? [];
+        $ignorePaths = $config['api-auth']['ignorePaths'] ?? $config['api-auth']['ignorePaths'] ?? [];
 
         /** @psalm-suppress MixedArgument */
         return new ApiAuth(

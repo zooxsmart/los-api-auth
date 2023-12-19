@@ -8,6 +8,7 @@
     <projectFiles>
         <directory name="src"/>
         <ignoreFiles>
+            <file name="config/autoload/*.local.php" />
             <directory name="vendor"/>
         </ignoreFiles>
     </projectFiles>
